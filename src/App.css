@@ -1,0 +1,861 @@
+:root {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 170vh;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #03101c;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+  background: #254f7d;
+  border-radius: 20px;
+}
+body {
+  scrollbar-face-color: #03101c;
+  scrollbar-track-color: #254f7d;
+}
+
+.App {
+  width: 100%;
+  height: 160vh;
+  background-image: url(../public/retro-living-room-interior-design.jpg);
+  background-size: 215vh 100vh;
+  position: fixed;
+}
+.App .container {
+  width: 90%;
+  height: 80vh;
+  background: linear-gradient(80deg, rgb(51, 100, 133), rgb(8, 29, 50));
+  border-radius: 50px;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+.App .container .navBar {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: fixed;
+  width: 100%;
+}
+.App .container .navBar .bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.App .container .navBar .bar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.App .container .navBar .bar ul:first-of-type {
+  margin-left: 50px;
+}
+.App .container .navBar .bar ul:nth-of-type(2) #icon img {
+  width: 35px;
+}
+.App .container .navBar .bar select {
+  margin-right: 50px;
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  margin: 0px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  -moz-appearance: transparent;
+  -o-appearance: transparent;
+  -webkit-appearance: transparent;
+  appearance: transparent;
+}
+.App .container .navBar .bar select:hover {
+  -webkit-appearance: transparent;
+     -moz-appearance: transparent;
+          appearance: transparent;
+  background-color: #093258;
+}
+.App .container .navBar .bar select option {
+  background-color: transparent;
+  cursor: pointer;
+}
+.App .container .header {
+  margin-top: 50px;
+  position: relative;
+}
+.App .container .header .myName {
+  position: absolute;
+  width: 100%;
+  font-size: 100px;
+  font-weight: 600;
+  opacity: 0.3;
+  letter-spacing: 10px;
+  cursor: default;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.App .container .header p:nth-of-type(1) {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+.App .container .header p:nth-of-type(2) {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.App .container .header .about-section {
+  transition: all 400ms;
+}
+.App .container .header .about-section .background-animat {
+  display: flex;
+  justify-content: center;
+}
+.App .container .header .about-section .background-animat .myInformation {
+  position: absolute;
+  width: 280px;
+  top: 30px;
+  left: 30px;
+  text-align: start;
+}
+.App .container .header .about-section .background-animat .myInformation h1 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: all 700ms ease;
+}
+.App .container .header .about-section .background-animat .myInformation h1:nth-of-type(2) {
+  height: 60px;
+}
+.App .container .header .about-section .background-animat .myInformation .animate-text {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.App .container .header .about-section .background-animat .myInformation h1.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+.App .container .header .about-section .background-animat .myInformation .spanAnimat {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.App .container .header .about-section .background-animat .myInformation .spanAnimat.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.App .container .header .about-section .background-animat .myInformation p {
+  opacity: 0;
+  transform: translateX(-180px);
+  transition: all 700ms ease;
+}
+.App .container .header .about-section .background-animat .myInformation p.slide-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.App .container .header .about-section .background-animat .circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-280deg);
+  top: 20px;
+  width: 130px;
+  height: 130px;
+  border: 80px #051424 solid;
+  border-right: transparent solid 80px;
+  border-radius: 50%;
+  transition: all 700ms ease;
+  z-index: -1;
+}
+.App .container .header .about-section .background-animat .circle.slide-in {
+  width: 260px;
+  height: 260px;
+  transform: translateX(-50%) rotate(30deg);
+}
+.App .container .header .about-section .background-animat .weatherDay {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 220px;
+  top: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 100;
+}
+.App .container .header .about-section .background-animat .weatherDay .weath {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 800;
+  overflow: hidden;
+  position: relative;
+}
+.App .container .header .about-section .background-animat .weatherDay .weath i {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  opacity: 0.4;
+  color: white;
+  font-size: 105px;
+  font-weight: 100;
+  z-index: -1;
+}
+.App .container .header .about-section .background-animat .weatherDay .tempe {
+  background: #a66901;
+}
+.App .container .header .about-section .background-animat .weatherDay .wind {
+  background-color: #aa0028;
+}
+.App .container .header .about-section .background-animat .weatherDay .humidity {
+  background-color: #081d32;
+}
+.App .container .header .about-section .background-animat .weatherDay .local {
+  background-color: #03101c;
+  color: #fff;
+  font-size: 15px;
+}
+.App .container .header .about-section .background-animat .weatherDay .local i {
+  background-color: #f7063e;
+}
+.App .container .header .about-section .background-animat .weatherDay .tempe,
+.App .container .header .about-section .background-animat .weatherDay .wind,
+.App .container .header .about-section .background-animat .weatherDay .humidity,
+.App .container .header .about-section .background-animat .weatherDay .local {
+  transition: all 700ms;
+  opacity: 0;
+  transform: translateX(290px);
+}
+.App .container .header .about-section .background-animat .weatherDay .tempe.show.slide-in,
+.App .container .header .about-section .background-animat .weatherDay .wind.show.slide-in,
+.App .container .header .about-section .background-animat .weatherDay .humidity.show.slide-in,
+.App .container .header .about-section .background-animat .weatherDay .local.show.slide-in {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.App .container .header .about-section .background-animat .News {
+  position: absolute;
+  background: #081d32;
+  color: #fff;
+  border-radius: 20px;
+  right: 50px;
+  top: 20px;
+  color: #081d32;
+  padding: 5px;
+  height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: all 700ms;
+  transform: translateX(150px);
+  opacity: 0;
+  z-index: 999;
+}
+.App .container .header .about-section .background-animat .News::-webkit-scrollbar {
+  width: 0px;
+  border-radius: 10px;
+}
+.App .container .header .about-section .background-animat .News::-webkit-scrollbar-track {
+  background-color: #e4e5eb;
+  border-radius: 20px;
+}
+.App .container .header .about-section .background-animat .News::-webkit-scrollbar-thumb {
+  background: #081d32;
+}
+.App .container .header .about-section .background-animat .News .newItem {
+  border-radius: 10px;
+  padding: 0px 3px;
+  width: 250px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+.App .container .header .about-section .background-animat .News .newItem .imageNews img {
+  width: 50px;
+  height: 35px;
+}
+.App .container .header .about-section .background-animat .News .newItem .textNews p {
+  color: #dedede;
+  font-size: 12px;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App .container .header .about-section .background-animat .News .newItem .textNews .louding {
+  font-size: large;
+}
+.App .container .header .about-section .background-animat .News.show.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+.App .container .header .skills-section {
+  transition: all 700ms;
+}
+.App .container .header .skills-section .circle-of-skills {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 290px;
+  height: 290px;
+  background-color: #051424;
+  margin-top: 45px;
+  border-radius: 50%;
+  box-shadow: 110px 10px 140px rgba(8, 29, 50, 0.1254901961);
+  z-index: 1;
+  transition: all 700ms ease;
+}
+.App .container .header .skills-section .circle-of-skills.show.slide-in {
+  width: 390px;
+  height: 390px;
+}
+.App .container .header .skills-section .mySkills .image-of-skills {
+  position: absolute;
+  background: linear-gradient(80deg, rgb(51, 100, 133), rgb(8, 29, 50));
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: 50%;
+  transition: all 700ms;
+  transform: translateX(-50%) translateY(10rem);
+  z-index: -1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills img {
+  width: 50px;
+  color: #e4e5eb;
+  transition: all 300ms;
+}
+.App .container .header .skills-section .mySkills .image-of-skills p {
+  margin-top: 0;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:first-child.show.slide-in {
+  transform: translateY(330px) translateX(-250px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(2).show.slide-in {
+  transform: translateY(225px) translateX(-310px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(3).show.slide-in {
+  transform: translateY(100px) translateX(-310px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(4).show.slide-in {
+  transform: translateY(-10px) translateX(-250px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(5).show.slide-in {
+  transform: translateY(-10px) translateX(177px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(6).show.slide-in {
+  transform: translateY(100px) translateX(240px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(7).show.slide-in {
+  transform: translateY(225px) translateX(240px);
+  z-index: 1;
+}
+.App .container .header .skills-section .mySkills .image-of-skills:nth-child(8).show.slide-in {
+  transform: translateY(330px) translateX(177px);
+  z-index: 1;
+}
+.App .container .header .project-section .circle-of-project {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+  background-color: #051424;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 700ms ease;
+}
+.App .container .header .project-section .allProject {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 88;
+}
+.App .container .header .project-section .allProject .project {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 995;
+  transition: all 700ms ease;
+  margin-top: 40px;
+}
+.App .container .header .project-section .allProject .project .one {
+  width: 270px;
+  height: 130px;
+  background-image: url(../public/Opera\ Snapshot_2023-07-07_190602_musical-griffin-83244e.netlify.app.png);
+  background-size: cover;
+  border-radius: 20px;
+  margin-right: 100px;
+}
+.App .container .header .project-section .allProject .project .one::after {
+  content: "mmmm mmm mmm mmmm mmmmmm mmmm mmmm mmmm mmmm mmmm mmmm mmmm";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  transition: opacity 300ms ease;
+  width: 240px;
+  opacity: 0;
+}
+.App .container .header .project-section .allProject .project .one:hover::after {
+  left: 270px;
+  opacity: 1;
+}
+.App .container .header .project-section .allProject .project .two {
+  width: 270px;
+  height: 130px;
+  background-image: url(../public/Opera\ Snapshot_2023-07-28_145551_127.0.0.1.png);
+  background-size: contain;
+  border-radius: 20px;
+}
+.App .container .header .project-section .allProject .project .two::after {
+  content: "mmmm mmm mmm mmmm mmmmmm mmmm mmmm mmmm mmmm mmmm mmmm mmmm";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 240px;
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+.App .container .header .project-section .allProject .project .two:hover::after {
+  left: -240px;
+  opacity: 1;
+}
+.App .container .header .project-section .allProject .project:nth-child(1) {
+  transform: translateY(-400px);
+  flex-direction: row-reverse;
+}
+.App .container .header .project-section .allProject .project:nth-child(2) {
+  transform: translateY(400px);
+  opacity: 0;
+}
+.App .container .header .project-section .allProject .project:nth-child(1).show.slide-in {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.App .container .header .project-section .allProject .project:nth-child(2).show.slide-in {
+  transform: translateY(250px);
+  opacity: 1;
+}
+.App .container .header .project-section .allProject .project .project-info {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: -1;
+}
+.App .container .header .project-section .allProject .project .project-info input {
+  background-color: transparent;
+  border: #fff solid 2px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 500ms;
+  z-index: 33;
+  transform: translateY(50px);
+  opacity: 0;
+}
+.App .container .header .project-section .allProject .project .project-info input:hover {
+  border-color: #f79e06;
+  color: #f79e06;
+  background-color: rgba(3, 5, 18, 0.5019607843);
+}
+.App .container .header .project-section .allProject .project .project-info::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 20, 36, 0.5019607843);
+  left: 0;
+  top: 0;
+  z-index: -2;
+  transition: display 300ms ease;
+  display: none;
+}
+.App .container .header .project-section .allProject .project .project-info:hover::before {
+  display: block;
+}
+.App .container .header .project-section .allProject .project .project-info:hover input {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.App .container .header .project-section .allProject .project .project-details p {
+  width: 240px;
+}
+.App .container .header .myImage {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 280px;
+  z-index: 99;
+  transition: all 400ms;
+  opacity: 0.8;
+}
+.App .container .slid {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.App .container .slid button {
+  position: absolute;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(9, 50, 88, 0.3137254902);
+  font-size: 26px;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  transition: all 400ms;
+}
+.App .container .slid button:hover {
+  background-color: #093258;
+}
+.App .container .slid .slide-forward {
+  right: -20px;
+}
+.App .container .slid .slide-backward {
+  left: -20px;
+}
+.App .container .Arrow {
+  color: #17ec25;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .App .container .header .myName {
+    font-size: 70px;
+  }
+  .App .container .header .about-section .background-animat .myInformation {
+    z-index: 888;
+  }
+  .App .container .header .about-section .background-animat .myInformation h1 {
+    font-size: 20px;
+  }
+  .App .container .header .about-section .background-animat .myInformation p {
+    font-size: 14px;
+    width: 160px;
+    letter-spacing: 1px;
+  }
+  .App .container .header .about-section .background-animat .circle {
+    top: 60px;
+  }
+  .App .container .header .about-section .background-animat .circle.slide-in {
+    width: 210px;
+    height: 210px;
+    border: 70px #051424 solid;
+    border-right: transparent solid 70px;
+  }
+  .App .container .header .about-section .background-animat .weatherDay {
+    width: 160px;
+    height: 160px;
+    right: 130px;
+  }
+  .App .container .header .about-section .background-animat .weatherDay .weath {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+  }
+  .App .container .header .about-section .background-animat .News .newItem {
+    width: 190px;
+  }
+  .App .container .header .about-section .background-animat .News .newItem .imageNews img {
+    width: 40px;
+    height: 20;
+  }
+  .App .container .header .skills-section .circle-of-skills {
+    top: 10px;
+    z-index: 2;
+  }
+  .App .container .header .skills-section .circle-of-skills.show.slide-in {
+    width: 270px;
+    height: 270px;
+  }
+  .App .container .header .skills-section .mySkills {
+    z-index: 1;
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills {
+    width: 40px;
+    height: 40px;
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills img {
+    width: 40px;
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:first-child.show.slide-in {
+    transform: translateX(-150px) translateY(310px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(2).show.slide-in {
+    transform: translateX(-200px) translateY(230px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(3).show.slide-in {
+    transform: translateX(-200px) translateY(110px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(4).show.slide-in {
+    transform: translateX(-150px) translateY(20px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(5).show.slide-in {
+    transform: translateX(90px) translateY(20px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(6).show.slide-in {
+    transform: translateX(140px) translateY(110px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(7).show.slide-in {
+    transform: translateX(140px) translateY(230px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(8).show.slide-in {
+    transform: translateX(100px) translateY(320px);
+  }
+  .App .container .header .project-section .circle-of-project {
+    top: 55px;
+  }
+  .App .container .header .project-section .allProject {
+    display: flex;
+    justify-content: space-between;
+  }
+  .App .container .header .project-section .allProject .project {
+    display: block;
+  }
+  .App .container .header .project-section .allProject .project .one {
+    width: 230px;
+    height: 100px;
+  }
+  .App .container .header .project-section .allProject .project .two {
+    width: 230px;
+    height: 100px;
+  }
+  .App .container .header .project-section .allProject .project:nth-child(1) {
+    transform: translateY(-300px);
+  }
+  .App .container .header .project-section .allProject .project:nth-child(2) {
+    transform: translateY(300px);
+  }
+  .App .container .header .project-section .allProject .project:nth-child(1).show.slide-in {
+    transform: translateY(0px);
+  }
+  .App .container .header .project-section .allProject .project:nth-child(2).show.slide-in {
+    transform: translateY(200px);
+  }
+  .App .container .header .project-section .allProject .project .project-info input {
+    padding: 6px 14px;
+  }
+  .App .container .header .project-section .allProject .project .project-details p {
+    width: 230px;
+    font-size: 14px;
+  }
+  .App .container .header .myImage {
+    top: 50px;
+    width: 200px;
+    opacity: 0.8;
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 700px) {
+  .App .container .navBar .bar ul:first-of-type {
+    display: none;
+  }
+  .App .container .header .myName {
+    display: none;
+  }
+  .App .container .header .about-section .background-animat .weatherDay {
+    width: 160px;
+    height: 160px;
+    right: 60px;
+    top: 260px;
+  }
+  .App .container .header .about-section .background-animat .weatherDay .weath {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+  }
+  .App .container .header .about-section .background-animat .News {
+    height: 220px;
+    right: 30px;
+  }
+  .App .container .header .about-section .background-animat .News .newItem {
+    width: 170px;
+  }
+  .App .container .header .about-section .background-animat .News .newItem .imageNews img {
+    width: 30px;
+    height: 20px;
+  }
+  .App .container .header .project-section .allProject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .App .container .header .project-section .allProject .project {
+    top: 0;
+  }
+  .App .container .header .project-section .allProject .project:nth-child(2).show.slide-in {
+    transform: translateY(160px);
+    opacity: 1;
+  }
+  .App .container .header .project-section .allProject .project .one {
+    margin-right: 0px;
+  }
+  .App .container .header .project-section .allProject .project .one:hover::after {
+    top: 120px;
+    left: 0;
+  }
+  .App .container .header .project-section .allProject .project .two:hover::after {
+    top: -120px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .App .container .header .about-section .background-animat .myInformation {
+    left: 15px;
+  }
+  .App .container .header .about-section .background-animat .myInformation p {
+    transform: translateX(-110px);
+  }
+  .App .container .header .about-section .background-animat .circle {
+    width: 100px;
+    height: 100px;
+    border: 40px #051424 solid;
+    border-right: transparent solid 40px;
+  }
+  .App .container .header .about-section .background-animat .circle.slide-in {
+    width: 180px;
+    height: 180px;
+    border: 60px #051424 solid;
+    border-right: transparent solid 60px;
+    transform: translateX(-50%) rotate(-20deg);
+  }
+  .App .container .header .about-section .background-animat .weatherDay {
+    right: 10px;
+    top: 110px;
+    opacity: 0.9;
+    width: 120px;
+    height: 120px;
+  }
+  .App .container .header .about-section .background-animat .weatherDay .weath {
+    font-size: 12px;
+    width: 50px;
+    height: 50px;
+  }
+  .App .container .header .about-section .background-animat .weatherDay .tempe,
+  .App .container .header .about-section .background-animat .weatherDay .wind,
+  .App .container .header .about-section .background-animat .weatherDay .humidity,
+  .App .container .header .about-section .background-animat .weatherDay .local {
+    transform: translateX(70px);
+  }
+  .App .container .header .about-section .background-animat .weatherDay .tempe.show.slide-in,
+  .App .container .header .about-section .background-animat .weatherDay .wind.show.slide-in,
+  .App .container .header .about-section .background-animat .weatherDay .humidity.show.slide-in,
+  .App .container .header .about-section .background-animat .weatherDay .local.show.slide-in {
+    transform: translateX(0px);
+  }
+  .App .container .header .about-section .background-animat .weatherDay .local {
+    font-size: 10px;
+  }
+  .App .container .header .about-section .background-animat .News {
+    transform: translateY(290px) translateX(80px);
+    opacity: 0;
+    height: 100px;
+    z-index: 666;
+  }
+  .App .container .header .about-section .background-animat .News .newItem .textNews p {
+    color: #b9b9b9;
+  }
+  .App .container .header .about-section .background-animat .News.show.slide-in {
+    transform: translateY(290px) translateX(20px);
+    opacity: 1;
+  }
+  .App .container .header .skills-section .circle-of-skills {
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    z-index: 0;
+  }
+  .App .container .header .skills-section .circle-of-skills.show.slide-in {
+    width: 270px;
+    height: 270px;
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills {
+    width: 40px;
+    height: 40px;
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills img {
+    width: 40px;
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:first-child.show.slide-in {
+    transform: translateX(-120px) translateY(310px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(2).show.slide-in {
+    transform: translateX(-140px) translateY(230px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(3).show.slide-in {
+    transform: translateX(-140px) translateY(110px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(4).show.slide-in {
+    transform: translateX(-120px) translateY(20px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(5).show.slide-in {
+    transform: translateX(70px) translateY(20px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(6).show.slide-in {
+    transform: translateX(90px) translateY(110px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(7).show.slide-in {
+    transform: translateX(90px) translateY(230px);
+  }
+  .App .container .header .skills-section .mySkills .image-of-skills:nth-child(8).show.slide-in {
+    transform: translateX(70px) translateY(320px);
+  }
+  .App .container .header .project-section .circle-of-project {
+    width: 200px;
+    height: 200px;
+    top: 100px;
+  }
+  .App .container .header .myImage {
+    z-index: 1;
+  }
+}/*# sourceMappingURL=App.css.map */
