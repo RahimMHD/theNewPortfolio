@@ -5,6 +5,7 @@ import { GrLocation } from "react-icons/gr"
 import { WiHumidity } from "react-icons/wi"
 import { useEffect, useState, useRef } from "react";
 import Typed from "typed.js"
+import image from "../../public/20230417_162301.png"
 
 export default function About({ location, humidity, wind, temperatur, news, reloud }) {
     const element = useRef(null);
@@ -46,7 +47,7 @@ export default function About({ location, humidity, wind, temperatur, news, relo
             news.articles.map((item, index) =>
                 <div key={index} className="newItem">
                     <div className="imageNews">
-                        <img src="..\public\news-g65d700b71_1280.png" alt="" />
+                        <img src={image} alt="" />
                     </div>
                     <div className="textNews">
                         <p>{item.title} </p>
