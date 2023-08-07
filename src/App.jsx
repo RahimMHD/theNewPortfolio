@@ -5,7 +5,6 @@ import Skills from './component/skills';
 import Project from './component/project';
 import TimeWeather from './component/smallComponent/time&weather'
 import ArrowFunc from './component/smallComponent/arrowFunc'
-import image from '../public/20230417_162301.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -127,7 +126,7 @@ function App() {
           </div>
 
           {dataWeather && page}
-          <img className="myImage" src={image} alt="portfolio image" />
+          <img className="myImage" src="..\public\20230417_162301.png" alt="portfolio image" />
         </div>
         <ArrowFunc
           count={count}
