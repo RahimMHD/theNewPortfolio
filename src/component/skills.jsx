@@ -1,4 +1,12 @@
 import { useEffect, useRef, useState } from "react"
+import html from "../../public/pngwing.com (10).png"
+import Css from "../../public/pngwing.com (9).png"
+import Javascript from "../../public/pngwing.com (11).png"
+import Sass from "../../public/pngwing.com (12).png"
+import Bootstrap from "../../public/pngwing.com (14).png"
+import jQuery from "../../public/pngwing.com (25).png"
+import react from "../../public/pngwing.com (16).png"
+import Redux from "../../public/pngwing.com (17).png"
 
 
 export default function Skills() {
@@ -32,35 +40,35 @@ export default function Skills() {
             <div className="circle-of-skills show" ref={refElement}></div>
             <div className="mySkills">
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (9).png" alt="" />
+                    <img src={Css} alt="" />
                     <p>CSS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (10).png" alt="" />
+                    <img src={html} alt="" />
                     <p>HTML</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (11).png" alt="" />
+                    <img src={Javascript} alt="" />
                     <p>JS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (12).png" alt="" />
+                    <img src={Sass} alt="" />
                     <p>SASS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (14).png" alt="" />
+                    <img src={Bootstrap} alt="" />
                     <p>Bootstrap</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (15).png" alt="" />
+                    <img src={jQuery} alt="" />
                     <p>jQuery</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (16).png" alt="" />
+                    <img src={react} alt="" />
                     <p>React</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (17).png" alt="" />
+                    <img src={Redux} alt="" />
                     <p>Redux</p>
                 </div>
 
