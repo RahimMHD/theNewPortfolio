@@ -45,23 +45,23 @@ export default function Skills() {
                     <p>JS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (12).png" alt="sass" />
+                    <img src="/pngwing.com (12).png" alt="sass" />
                     <p>SASS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (14).png" alt="bootstrap" />
+                    <img src="/pngwing.com (14).png" alt="bootstrap" />
                     <p>Bootstrap</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (15).png" alt="jQuery" />
+                    <img src="/pngwing.com (15).png" alt="jQuery" />
                     <p>jQuery</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (16).png" alt="react" />
+                    <img src="/pngwing.com (16).png" alt="react" />
                     <p>React</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (17).png" alt="redux" />
+                    <img src="/pngwing.com (17).png" alt="redux" />
                     <p>Redux</p>
                 </div>
 

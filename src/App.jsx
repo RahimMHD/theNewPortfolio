@@ -126,7 +126,7 @@ function App() {
           </div>
 
           {dataWeather && page}
-          <img className="myImage" src="..\public\20230417_162301.png" alt="portfolio image" />
+          <img className="myImage" src="/20230417_162301.png" alt="portfolio image" />
         </div>
         <ArrowFunc
           count={count}
