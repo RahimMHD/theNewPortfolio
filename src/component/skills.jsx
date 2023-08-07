@@ -33,15 +33,15 @@ export default function Skills() {
             <div className="circle-of-skills show" ref={refElement}></div>
             <div className="mySkills">
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (9).png" alt="css" />
+                    <img src="/pngwing.com (9).png" alt="css" />
                     <p>CSS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (10).png" alt="html" />
+                    <img src="/pngwing.com (10).png" alt="html" />
                     <p>HTML</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
-                    <img src="..\public\pngwing.com (11).png" alt="javascript" />
+                    <img src="/pngwing.com (11).png" alt="javascript" />
                     <p>JS</p>
                 </div>
                 <div className="image-of-skills show" ref={refElement}>
