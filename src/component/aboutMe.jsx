@@ -47,7 +47,7 @@ export default function About({ location, humidity, wind, temperatur, news, relo
             news.articles.map((item, index) =>
                 <div key={index} className="newItem">
                     <div className="imageNews">
-                        <img src={image} alt="" />
+                        <img src={require("./20230417_162301.png")} alt="" />
                     </div>
                     <div className="textNews">
                         <p>{item.title} </p>
