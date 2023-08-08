@@ -20,8 +20,17 @@ function App() {
   const [reloudPage, setRelaudPage] = useState(false)
   const [icon, setIcon] = useState("")
 
+  const url = 'https://news-api14.p.rapidapi.com/top-headlines?country=us&language=en&pageSize=10&category=sports';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '9dd5383824mshd3eaa168a4952edp14ac06jsnf8344bc3bf2e',
+      'X-RapidAPI-Host': 'news-api14.p.rapidapi.com'
+    }
+  };
+
   useEffect(() => {
-    fetch('https://newsapi.org/v2/everything?q=tesla&from=2023-07-29&sortBy=publishedAt&apiKey=3aebc336deb54b9f8e7a7a89d071998f')
+    fetch(url, options)
       .then(res => res.json())
       .then(res => {
         setNews(res);
