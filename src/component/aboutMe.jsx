@@ -92,7 +92,7 @@ export default function About({ location, humidity, wind, temperatur, news, relo
                         news ? lastNews
                             : <div className="newItem">
                                 <div className="imageNews">
-                                    <img src="..\public\news-g65d700b71_1280.png" alt="" />
+                                    <img src="/news-g65d700b71_1280.png" alt="" />
                                 </div>
                                 <div className="textNews">
                                     <p className="Louding">news </p>
