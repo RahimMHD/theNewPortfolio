@@ -20,17 +20,17 @@ function App() {
   const [reloudPage, setRelaudPage] = useState(false)
   const [icon, setIcon] = useState("")
 
-  // useEffect(() => {
-  //   fetch('https://newsapi.org/v2/everything?q=tesla&from=2023-07-29&sortBy=publishedAt&apiKey=3aebc336deb54b9f8e7a7a89d071998f')
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       setNews(res);
-  //       console.log(res)
-  //       setRelaudPage(p => !p)
-  //     })
-  //     .catch(err => console.log(err));
-  //   setReloud(true)
-  // }, [])
+  useEffect(() => {
+    fetch('https://newsapi.org/v2/everything?q=tesla&from=2023-07-29&sortBy=publishedAt&apiKey=3aebc336deb54b9f8e7a7a89d071998f')
+      .then(res => res.json())
+      .then(res => {
+        setNews(res);
+        console.log(res)
+        setRelaudPage(p => !p)
+      })
+      .catch(err => console.log(err));
+    setReloud(true)
+  }, [])
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationWeather}&limit=5&appid=e3edb0e7fc06ca57f7b03955d0404d15`)
