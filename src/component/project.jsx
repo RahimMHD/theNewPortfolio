@@ -39,8 +39,8 @@ export default function Project() {
                 </div>
                 <div className="project show" ref={refElement}>
                     <div className="project-info two">
-                        <a href=""><input type="button" value="Demo" /></a>
-                        <a href=""><input type="button" value="Code" /></a>
+                        <a href="https://effortless-semolina-4f122c.netlify.app" target="_blanc"><input type="button" value="Demo" /></a>
+                        <a href="https://github.com/RahimMHD/project-portfolio-template" target="_blanc"><input type="button" value="Code" /></a>
                     </div>
                 </div>
             </div>
