@@ -65,11 +65,10 @@ export default function About({ location, humidity, wind, temperatur, news, relo
                     <h1 className="welcom show" ref={refElement}>Hello</h1>
                     <h1 className="animate-text show" ref={element}></h1>
                     <p ref={refElement} className="show">
-                        My name is Mehdi Abderahim call me Rahim it's easy😊,
-                        I’m a qualified Front-End Developer, I love coding and build a modern, clean,
-                        nice website, and passionate to learn more and more technologies,
-                        and i'm passionate to solve proplems and work with other developer,
-                        I will be glad to become a part of your work, Best regards😊
+                        I’m a qualified Front-End Developer, I love coding and build a modern,
+                        clean, nice website, & to learn more and more technologies, and i'm
+                        passionate to solve proplems and work with other developer, I will be
+                        glad to become a part of your work, Best regards😊.
                     </p>
                 </div>
                 <div className="circle show" ref={refElement}></div>
