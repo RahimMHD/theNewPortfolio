@@ -3,7 +3,7 @@ import './App.scss'
 import About from './component/aboutMe';
 import Skills from './component/skills';
 import Project from './component/project';
-import Project from './component/messageMe';
+import Message from './component/messageMe';
 import TimeWeather from './component/smallComponent/time&weather'
 import ArrowFunc from './component/smallComponent/arrowFunc'
 
