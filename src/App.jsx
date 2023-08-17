@@ -3,6 +3,7 @@ import './App.scss'
 import About from './component/aboutMe';
 import Skills from './component/skills';
 import Project from './component/project';
+import Project from './component/messageMe';
 import TimeWeather from './component/smallComponent/time&weather'
 import ArrowFunc from './component/smallComponent/arrowFunc'
 
@@ -74,6 +75,10 @@ function App() {
         setcountPage(false)
         setPage(<Project />)
 
+      } else if (count == 3) {
+        setcountPage(false)
+        setPage(<Message />)
+
       } else if (count > 2 || count < 0) {
         setcountPage(true)
         setCount(0)
@@ -85,10 +90,11 @@ function App() {
           news={news}
           reloud={reloudPage}
         />)
+
       }
     }
 
-  }, [count, locationWeather, reloudPage])
+  }, [count, dataWeather, locationWeather, news, reloudPage])
 
 
   const handelChangeOption = () => {
@@ -102,7 +108,7 @@ function App() {
       .forEach(el => el.classList.remove("slide-in")
       )
     setTimeout(() => {
-      setCount(prev => prev <= 0 ? 2 : prev - 1)
+      setCount(prev => prev <= 0 ? 3 : prev - 1)
     }, 500)
   }
 
@@ -111,7 +117,7 @@ function App() {
       .forEach(el => el.classList.remove("slide-in")
       )
     setTimeout(() => {
-      setCount(prev => prev < 2 && prev + 1)
+      setCount(prev => prev < 3 && prev + 1)
     }, 500)
   }
 

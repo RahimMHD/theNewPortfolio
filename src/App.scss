@@ -162,7 +162,7 @@ body {
       .about-section {
         transition: all 400ms;
 
-        .background-animat {
+        .background-animate {
           display: flex;
           justify-content: center;
 
@@ -223,7 +223,7 @@ body {
             position: absolute;
             left: 50%;
             transform: translateX(-50%) rotate(-280deg);
-            top: 20px;
+            top: 15px;
             width: 130px;
             height: 130px;
             border: 80px #051424 solid;
@@ -556,7 +556,7 @@ body {
               border-radius: 20px;
 
               &::after {
-                content: "This website shows the skills animation and smouth transition with responsive in small screen with beuatiful item & image";
+                content: "This website shows the skills animation and smooth transition with responsive in small screen with beautiful item & image";
                 position: absolute;
                 left: 0;
                 top: 6px;
@@ -644,7 +644,6 @@ body {
                   transform: translateY(0px);
                 }
               }
-
             }
 
             .project-details {
@@ -652,11 +651,93 @@ body {
                 width: 240px;
               }
             }
-
           }
+        }
+      }
 
+      .contact-me-section {
+
+        .circle-contact {
+          position: absolute;
+          width: 290px;
+          height: 290px;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 15px;
+          background-color: #051424;
+          border-radius: 50%;
+          z-index: -1;
+          transition: all 700ms ease;
         }
 
+        .recruter {
+          position: absolute;
+          top: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          z-index: 999;
+          color: #fff;
+          opacity: 0.2;
+          transition: opacity 400ms ease-in-out;
+
+          .recruter-desc {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            z-index: 99;
+            input {
+              transition: all 400ms ease;
+              padding: 10px;
+              font-size: 19px;
+              font-weight: 600;
+              background-color: #ffffff40;
+              border-radius: 20px;
+              &::placeholder {
+                color: #ffffff70;
+              }
+            }
+          } 
+          #email {
+            margin-bottom: 30px;
+            background-color: #ffffff40;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 20px;
+            &::placeholder {
+              color: #ffffff70;
+            }
+          }
+          #message {
+            background-color: #ffffff40;
+            padding: 6px;
+            border-radius: 20px;
+            font-size: 18px;
+            &::placeholder {
+              color: #ffffff70;
+            }
+          }
+          #btn-msg {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #09325890;
+            cursor: pointer;
+            transition: all 200ms ease;
+            font-size: 20px;
+            font-weight: 600;
+            &:hover {
+              background-color: #093258;
+            }
+          }
+        }
+        .show.slide-in {
+          opacity: 1;
+        }
+        
       }
 
       .myImage {
@@ -1005,6 +1086,26 @@ body {
             }
           }
         }
+
+        .contact-me-section {
+          .recruter {
+            .recruter-desc {
+              input {
+                font-size: 15px;
+                font-weight: 400;
+              }
+            }
+            input {
+              font-size: 15px;
+              font-weight: 400;
+            }
+            textarea {
+              font-size: 15px;
+              font-weight: 400;
+            }
+          }
+        }
+
       }
     }
   }

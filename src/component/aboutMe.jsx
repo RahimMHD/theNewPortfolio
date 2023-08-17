@@ -60,14 +60,14 @@ export default function About({ location, humidity, wind, temperatur, news, relo
 
     return (
         <div className="about-section">
-            <div className="background-animat">
+            <div className="background-animate">
                 <div className="myInformation">
-                    <h1 className="welcom show" ref={refElement}>Hello</h1>
+                    <h1 className="welcome show" ref={refElement}>Hello</h1>
                     <h1 className="animate-text show" ref={element}></h1>
                     <p ref={refElement} className="show">
                         I’m a qualified Front-End Developer, I love coding and build a modern,
                         clean, nice website, & to learn more and more technologies, and i'm
-                        passionate to solve proplems and work with other developer, I will be
+                        passionate to solve problems and work with other developer, I will be
                         glad to become a part of your work, Best regards😊.
                     </p>
                 </div>
