@@ -1,5 +1,6 @@
 
 import { useEffect, useRef, useState } from "react"
+import emailjs from '@emailjs/browser'
 
 export default function Message() {
 
@@ -25,6 +26,16 @@ export default function Message() {
             })
         }
     }, [isIntersecting]); 
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm("service_5orbjkb" ,"template_3akhsna" ,refForm.current, "xbKovPP6fy1UMn-Y0")
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        
+        e.target.reset();
+    }
 
 
     return (
