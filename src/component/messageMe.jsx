@@ -6,6 +6,7 @@ export default function Message() {
 
     const [isIntersecting, setIsIntersecting] = useState(false)
     const refElement = useRef(null);
+    const refForm = useRef();
 
     useEffect(() => {
         const interObserve = new IntersectionObserver(([entries]) => {
