@@ -136,8 +136,8 @@ function App() {
         </div>
         <div className='header'>
           <div className="myName">
-            <p>My Name is:</p>
-            <p>Mehdi AbdArahim</p>
+            <p>Mehdi</p>
+            <p>AbdArahim</p>
           </div>
 
           {dataWeather && page}

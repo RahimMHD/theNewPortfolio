@@ -692,6 +692,7 @@ body {
               }
               p {
                 color: #b9c6d4;
+                margin-top: 10px;
               }
             }
             .contact-personnel {
@@ -699,7 +700,7 @@ body {
               z-index: 999;
               div {
                 display: flex;
-                align-items: center;
+                align-items: baseline;
                 gap: 20px;
               }
             }
@@ -748,7 +749,6 @@ body {
               display: flex;
               flex-direction: column;
               color: #fff;
-              opacity: 0.2;
               transition: opacity 400ms ease-in-out;
               background-color: #4453a530;
               padding: 13px 20px;
@@ -818,9 +818,6 @@ body {
                 }
               }
             }
-          }
-          .show.slide-in {
-            opacity: 1;
           }
         }
         
