@@ -145,27 +145,24 @@ body {
         justify-content: center;
         align-items: center;
         z-index: -1;
-
-        p:nth-of-type(1) {
-          margin-top: 30px;
-          margin-bottom: 0px;
-          letter-spacing: 26px;
-        }
-
-        p:nth-of-type(2) {
-          margin-top: 0px;
-          margin-bottom: 10px;
-          justify-content: center;
-          letter-spacing: 26px;
-          // transform: translateX(30%);
-        }
       }
 
+      p:nth-of-type(1) {
+        margin-top: 30px;
+        margin-bottom: 0px;
+      }
+
+      p:nth-of-type(2) {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        justify-content: center;
+        // transform: translateX(30%);
+      }
 
       .about-section {
         transition: all 400ms;
 
-        .background-animat {
+        .background-animate {
           display: flex;
           justify-content: center;
 
@@ -248,7 +245,7 @@ body {
             position: absolute;
             width: 200px;
             height: 200px;
-            right: 250px;
+            right: 260px;
             top: 240px;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -505,6 +502,7 @@ body {
           border-radius: 50%;
           z-index: -1;
           transition: all 700ms ease;
+
         }
 
         .allProject {
@@ -525,7 +523,7 @@ body {
             .one {
               width: 270px;
               height: 130px;
-              background-image: url(../public/Opera\ Snapshot_2023-07-07_190602_musical-griffin-83244e.netlify.app.png);
+              background-image: url(/Opera\ Snapshot_2023-07-07_190602_musical-griffin-83244e.netlify.app.png);
               background-size: cover;
               border-radius: 20px;
               margin-right: 100px;
@@ -553,12 +551,12 @@ body {
             .two {
               width: 270px;
               height: 130px;
-              background-image: url(../public/Opera\ Snapshot_2023-07-28_145551_127.0.0.1.png);
+              background-image: url(/Opera\ Snapshot_2023-07-28_145551_127.0.0.1.png);
               background-size: contain;
               border-radius: 20px;
 
               &::after {
-                content: "This website shows the skills animation and smouth transition with responsive in small screen with beuatiful item & image";
+                content: "This website shows the skills animation and smooth transition with responsive in small screen with beautiful item & image";
                 position: absolute;
                 left: 0;
                 top: 6px;
@@ -646,7 +644,6 @@ body {
                   transform: translateY(0px);
                 }
               }
-
             }
 
             .project-details {
@@ -654,11 +651,8 @@ body {
                 width: 240px;
               }
             }
-
           }
-
         }
-
       }
 
       .contact-me-section {
@@ -685,7 +679,6 @@ body {
           z-index: 999;
           
           .contact-info {
-            min-width: 200px;
             padding: 10px 16px;
             display: flex;
             flex-direction: column;
@@ -702,6 +695,7 @@ body {
               }
               p {
                 color: #b9c6d4;
+                margin-top: 10px;
               }
             }
             .contact-personnel {
@@ -709,7 +703,7 @@ body {
               z-index: 999;
               div {
                 display: flex;
-                align-items: center;
+                align-items: baseline;
                 gap: 20px;
               }
             }
@@ -751,12 +745,11 @@ body {
             }
           }
           .show.slide-in {
-            transform: translateX(0);
+            transform: translateX(0px);
             opacity: 1;
           }
+
           form {
-            min-width: 200px;
-            z-index: 9999;
             
             .recruter {
               margin-top: 10px;
@@ -768,10 +761,10 @@ body {
               background-color: #4453a530;
               padding: 13px 20px;
               border-radius: 20px;
-              // z-index: 999;
+              z-index: 999;
               transform: translateX(80px);
               opacity: 0.2;
-              
+
               h3 {
                 margin: 5px auto 13px;
               }
@@ -780,6 +773,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                z-index: 999;
                 input {
                   width: 90%;
                   transition: all 400ms ease;
@@ -803,6 +797,7 @@ body {
                 border-radius: 9px;
                 font-size: 18px;
                 border: none;
+                z-index: 999;
                 &::placeholder {
                   color: #ffffff70;
                 }
@@ -813,6 +808,7 @@ body {
                 border-radius: 6px;
                 font-size: 17px;
                 border: none;
+                z-index: 999;
                 &::placeholder {
                   color: #ffffff70;
                 }
@@ -822,6 +818,7 @@ body {
                 padding: 10px;
                 border-radius: 7px;
                 background-color: #09325890;
+                z-index: 999;
                 cursor: pointer;
                 transition: all 200ms ease;
                 font-size: 16px;
@@ -831,22 +828,22 @@ body {
                 }
               }
             }
-          }
-          .show.slide-in {
-            transform: translateX(0);
-            opacity: 1;
+            .show.slide-in {
+              transform: translateX(0);
+              opacity: 1;
+            }
           }
         }
         
       }
-      
+
       .myImage {
         position: absolute;
         left: 50%;
         top: 0;
         transform: translateX(-50%);
         width: 280px;
-        z-index: 90;
+        z-index: 99;
         transition: all 400ms;
         opacity: 0.8;
       }
