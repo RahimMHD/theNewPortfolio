@@ -684,6 +684,9 @@ body {
             flex-direction: column;
             justify-content: center;
             z-index: 999;
+            transform: translateX(-80px);
+            opacity: 0.2;
+            transition: all 500ms ease;
             .contact-info-text {
               margin: 0 0 0 10px;
               width: 75%;
@@ -741,6 +744,11 @@ body {
               }
             }
           }
+          .show.slide-in {
+            transform: translateX(0px);
+            opacity: 1;
+          }
+
           form {
             
             .recruter {
@@ -749,11 +757,13 @@ body {
               display: flex;
               flex-direction: column;
               color: #fff;
-              transition: opacity 400ms ease-in-out;
+              transition: all 400ms ease-in-out;
               background-color: #4453a530;
               padding: 13px 20px;
               border-radius: 20px;
               z-index: 999;
+              transform: translateX(80px);
+              opacity: 0.2;
 
               h3 {
                 margin: 5px auto 13px;
@@ -817,6 +827,10 @@ body {
                   background-color: #093258;
                 }
               }
+            }
+            .show.slide-in {
+              transform: translateX(0);
+              opacity: 1;
             }
           }
         }

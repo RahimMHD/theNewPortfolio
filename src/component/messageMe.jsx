@@ -43,7 +43,7 @@ export default function Message() {
         <div className="contact-me-section show">
             <div className="circle-contact"></div>
             <div className='contact-information'>
-                <div className="contact-info">
+                <div className="contact-info show">
                     <div className='contact-info-text'>
                         <h3>Contact Information</h3>
                         <p>Fill up the form & i will get back to you within 24 hours</p>
