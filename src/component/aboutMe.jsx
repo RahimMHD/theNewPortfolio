@@ -60,7 +60,7 @@ export default function About({ location, humidity, wind, temperatur, news, relo
 
     return (
         <div className="about-section">
-            <div className="background-animate">
+            <div className="background-animat">
                 <div className="myInformation">
                     <h1 className="welcome show" ref={refElement}>Hello</h1>
                     <h1 className="animate-text show" ref={element}></h1>
