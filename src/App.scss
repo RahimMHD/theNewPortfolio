@@ -43,8 +43,6 @@
 
 body {
   overflow-x: hidden;
-  min-height: 100vh;
-  min-width: 170vh;
   @include scrollbars(10px, #03101c, #254f7d);
   margin: 0;
   padding: 0;
@@ -496,7 +494,7 @@ body {
           height: 290px;
           left: 50%;
           transform: translateX(-50%);
-          top: 15px;
+          top: 35px;
           background-color: #051424;
           border-radius: 50%;
           z-index: -1;
@@ -662,7 +660,7 @@ body {
           height: 290px;
           left: 50%;
           transform: translateX(-50%);
-          top: 15px;
+          top: 35px;
           background-color: #051424;
           border-radius: 50%;
           z-index: -1;
@@ -749,6 +747,7 @@ body {
           }
 
           form {
+            z-index: 999;
             
             .recruter {
               margin-top: 10px;
@@ -760,7 +759,6 @@ body {
               background-color: #4453a530;
               padding: 13px 20px;
               border-radius: 20px;
-              z-index: 999;
               transform: translateX(80px);
               opacity: 0.2;
 
@@ -772,15 +770,15 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                z-index: 999;
+
                 input {
                   width: 90%;
                   transition: all 400ms ease;
                   padding: 10px;
                   font-size: 16px;
                   font-weight: 500;
-                  background-color: #ffffff40;
-                  border-radius: 9px;
+                  background-color: #ffffff55;
+                  border-radius: 16px;
                   border: none;
                   margin-bottom: 20px;
                   
@@ -791,33 +789,33 @@ body {
               } 
               #email {
                 margin-bottom: 20px;
-                background-color: #ffffff40;
+                background-color: #ffffff55;
                 padding: 10px;
-                border-radius: 9px;
+                border-radius: 16px;
                 font-size: 18px;
                 border: none;
-                z-index: 999;
+    
                 &::placeholder {
                   color: #ffffff70;
                 }
               }
               #message {
-                background-color: #ffffff40;
+                background-color: #ffffff55;
                 padding: 6px;
-                border-radius: 6px;
+                border-radius: 16px;
                 font-size: 17px;
                 border: none;
-                z-index: 999;
+      
                 &::placeholder {
                   color: #ffffff70;
                 }
               }
               #btn-msg {
-                margin-top: 10px;
+                width: 200px;
+                margin: 10px auto 0;
                 padding: 10px;
-                border-radius: 7px;
-                background-color: #09325890;
-                z-index: 999;
+                border-radius: 20px;
+                background-color: #005bb190;
                 cursor: pointer;
                 transition: all 200ms ease;
                 font-size: 16px;
@@ -923,7 +921,7 @@ body {
             }
 
             .circle {
-              top: 60px;
+              top: 50px;
             }
 
             .circle.slide-in {
@@ -1021,7 +1019,7 @@ body {
         .project-section {
 
           .circle-of-project {
-            top: 55px;
+            top: 35px;
           }
 
           .allProject {
@@ -1176,8 +1174,6 @@ body {
                   }
                 }
               }
-
-
             }
           }
         }
@@ -1243,10 +1239,11 @@ body {
             }
 
             .circle {
-              width: 100px;
-              height: 100px;
+              width: 120px;
+              height: 120px;
               border: 40px #051424 solid;
               border-right: transparent solid 40px;
+              top: 100px;
             }
 
             .circle.slide-in {
@@ -1255,6 +1252,7 @@ body {
               border: 60px #051424 solid;
               border-right: transparent solid 60px;
               transform: translateX(-50%) rotate(-20deg);
+              top: 60px;
             }
 
             .weatherDay {
@@ -1317,7 +1315,7 @@ body {
           .circle-of-skills {
             width: 200px;
             height: 200px;
-            top: 50px;
+            top: 60px;
             z-index: 0;
           }
 
@@ -1341,11 +1339,11 @@ body {
               }
 
               &:nth-child(2).show.slide-in {
-                transform: translateX(-140px) translateY(230px);
+                transform: translateX(-150px) translateY(230px);
               }
 
               &:nth-child(3).show.slide-in {
-                transform: translateX(-140px) translateY(110px);
+                transform: translateX(-150px) translateY(110px);
               }
 
               &:nth-child(4).show.slide-in {
@@ -1353,7 +1351,7 @@ body {
               }
 
               &:nth-child(5).show.slide-in {
-                transform: translateX(70px) translateY(20px);
+                transform: translateX(65px) translateY(20px);
               }
 
               &:nth-child(6).show.slide-in {
@@ -1365,7 +1363,7 @@ body {
               }
 
               &:nth-child(8).show.slide-in {
-                transform: translateX(70px) translateY(320px);
+                transform: translateX(65px) translateY(320px);
               }
             }
           }
@@ -1380,6 +1378,11 @@ body {
         }
 
         .contact-me-section {
+          .circle-contact {
+            width: 200px;
+            height: 200px;
+            top: 100px;
+          }
           .contact-information {
             display: flex;
             flex-direction: column-reverse;
@@ -1388,6 +1391,7 @@ body {
               display: flex;
               justify-content: center;
               align-items: center;
+              margin-top: 15px;
               .contact-info-text {
                 display: none;
               }
@@ -1404,6 +1408,7 @@ body {
             }
             form {
               .recruter {
+                margin-top: 25px;
                 .recruter-desc {
                   flex-direction: row;
                   gap: 10px;
