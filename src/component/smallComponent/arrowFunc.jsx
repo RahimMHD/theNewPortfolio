@@ -9,7 +9,7 @@ export default function ArrowFunc({ count, slidePageBack, slidePagefor }) {
     const keyPressFunc = (e) => {
         if (!click) {
             if (e.key == "ArrowRight") {
-                if (count < 2) {
+                if (count < 3) {
                     slidePagefor()
                 }
 
@@ -36,7 +36,7 @@ export default function ArrowFunc({ count, slidePageBack, slidePagefor }) {
                     </i>
                 </button>
             }
-            {count < 2 &&
+            {count < 3 &&
                 <button className='slide-forward' onClick={() => slidePagefor()}>
                     <i>
                         <AiOutlineRight />
